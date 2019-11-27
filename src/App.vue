@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>movie rating</h1>
+    <Table column_1="title" column_2="imdb-id" column_3="rank" column_4="rating" column_5="rating-count"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Table from './components/Table'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Table
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+  --white: rgb(255, 255, 255);
+  --black: rgba(0, 0, 0, 0.5);
+  --lightgrey: rgba(255,255,255,0.3);
+  --darkblue: rgb(16, 99, 173);
+  --lightblue: #25b7c4;
+  --cyan: #25c481;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  background: -webkit-linear-gradient(left, var(--cyan), var(--lightblue));
+  background: linear-gradient(to right, var(--cyan), var(--lightblue));
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  text-transform: uppercase;
+  color: var(--darkblue);
+  text-shadow: 1px 1px var(--black);
 }
 </style>
